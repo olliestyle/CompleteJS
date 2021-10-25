@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form_Sample</title>
+</head>
+<body>
+    <form>
+        <table align="center" width="500">
+            <caption>Registration form</caption>
+            <tr>
+                <td>User name</td>
+                <td>
+                    <input type="text" name="txtname" placeholder="max 10 chars only" autofocus required maxlength="10" size="20" pattern="[A-Z]{1-10}">
+                </td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td>
+                    <input type="password" name="txtpassword" placeholder="password should be 4 to 15 chars" required pattern="[a-z A-Z 0-9]{4-15}">
+                </td>
+            </tr>
+            <tr>
+                <td>Age</td>
+                <td>
+                    <input type="number" name="txtage" min="15" max="30" value="2">
+                </td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>
+                    <input type="email" name="txtemail">
+                </td>
+            </tr>
+            <tr>
+                <td>Favourite color</td>
+                <td>
+                    <input type="color" name="txtcolor">
+                </td>
+            </tr>
+            <tr>
+                <td>Favourite football name</td>
+                <td>
+                    <input type="text" list="players">
+                    <datalist id="players">
+                        <option>ron</option>
+                        <option>mes</option>
+                        <option>pel</option>
+                        <option>yas</option>
+                    </datalist>
+                </td>
+            </tr>
+            <tr>
+                <td>Price range</td>
+                <td>
+                    <input type="range" name="txtprice">
+                </td>
+            </tr>
+            <tr>
+                <td>Upload photo</td>
+                <td>
+                    <input type="file" name="txtphoto">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="Register">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
