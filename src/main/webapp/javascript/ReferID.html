@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ReferId</title>
+    <script>
+        function bodyload() {
+            document.getElementById("imgid1").src = "/CompleteJS/images/baloon.jpeg";
+            document.getElementById("txtbutton").value = "Register";
+        }
+    </script>
+</head>
+<body onload="bodyload()">
+    <div>
+        <img id="imgid1" width="300" height="300" border="1">
+    </div>
+    <div>
+        <form>
+            Name: <input type="text" id="txtname">
+                  <input type="button" id="txtbutton">
+        </form>
+    </div>
+</body>
+</html>
