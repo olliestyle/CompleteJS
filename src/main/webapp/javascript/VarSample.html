@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VarSample</title>
+    <script>
+        "use strict" //use to apply new features of JS
+        var x = 3; // global scope - can use in any function
+        function f1() {
+            var y=5; // we can see it anywhere in func
+            if (y==5) {
+                let z = 3; // let is uses for local scopes
+            }
+            window.a = 4;
+            /*
+            if we declare variable in function, but want to see it in another func,
+            we can use window keyword */
+        }
+        f1();
+    </script>
+</head>
+<body>
+
+</body>
+</html>
