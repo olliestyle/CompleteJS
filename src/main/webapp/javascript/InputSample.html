@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>InputSample</title>
+    <style>
+        dt{
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        function register() {
+            var ID=document.getElementById("txtId").value;
+            var name=document.getElementById("txtName").value;
+            var price=document.getElementById("txtPrice").value;
+            var date=document.getElementById("txtDate").value;
+            var isInStock=document.getElementById("optYes");
+            var isOutStock=document.getElementById("optNo");
+            if(isInStock.checked)
+            var stock=isInStock.value;
+            if(isOutStock.checked)
+            stock=isOutStock.value;
+            var city = document.getElementById("lstCities").value;
+
+            document.getElementById("lblId").innerText=ID;
+            document.getElementById("lblName").innerText=name;
+            document.getElementById("lblPrice").innerText=price;
+            document.getElementById("lblDate").innerText=date;
+            document.getElementById("lblStock").innerText=stock;
+            document.getElementById("lblShipped").innerText=city;
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <form>
+            <fieldset id="showRegister">
+                <legend>Register product</legend>
+                <dl>
+                    <dt>Product ID</dt>
+                    <dd><input type="number" min="1" max="10" id="txtId"></dd>
+                    <dt>Product Name</dt>
+                    <dd><input type="text" id="txtName"></dd>
+                    <dt>Product price</dt>
+                    <dd><input type="range" min="1000" max="40000" id="txtPrice"></dd>
+                    <dt>Product manufactured</dt>
+                    <dd><input type="date" id="txtDate"></dd>
+                    <dt>Is in stock</dt>
+                    <dd>
+                        <input type="radio" name="stock" value="In Stock" id="optYes">Yes
+                        <input type="radio" name="stock" value="Out of Stock" id="optNo">No
+                    </dd>
+                    <dt>Shipped to</dt>
+                    <dd>
+                        <select id="lstCities">
+                            <option value="SPb">SPb</option>
+                            <option value="Moscow">Moscow</option>
+                        </select>
+                    </dd>
+                </dl>
+                <br>
+                <input type="button" value="Register" onclick="register()">
+            </fieldset>
+        </form>
+        <br>
+        <fieldset id="showDetails">
+            <legend>Product Details</legend>
+            <table width="1000" border="1">
+                <thead>
+                    <th>Product Id</th>
+                    <th>Product Name</th>
+                    <th>Product Price</th>
+                    <th>Product Manufactured Date</th>
+                    <th>Product stock?</th>
+                    <th>Product shipped to</th>
+                </thead>
+                <tbody>
+                <tr>
+                    <td id="lblId"></td>
+                    <td id="lblName"></td>
+                    <td id="lblPrice"></td>
+                    <td id="lblDate"></td>
+                    <td id="lblStock"></td>
+                    <td id="lblShipped"></td>
+                </tr>
+                </tbody>
+            </table>
+        </fieldset>
+    </div>
+</body>
+</html>
