@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ReferClassName</title>
+    <style>
+        .bclass{
+            color: blue;
+            background-color: black;
+        }
+    </style>
+    <script>
+        function bodyload() {
+            var x = document.getElementsByClassName("bclass");
+            alert("total no.of elements using bclass" + x.length)
+        }
+    </script>
+</head>
+<body onload="bodyload()">
+    <h2 class="bclass">Welcome to ReferClassName</h2>
+</body>
+</html>
