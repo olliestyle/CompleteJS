@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ObjectSample</title>
+    <script>
+        function objSample() {
+            var product={
+                Id : 1,
+                name : "duck",
+                price : 13000,
+                isInStock : false,
+                quantity : 3,
+                shippedTo : ["SPb", "Moscow"],
+                total : function () {
+                    return product.quantity*product.price;
+                }
+            }
+            if (product.isInStock==true) {
+                stock = "Available";
+            } else {
+                stock = "out of stock";
+            }
+            document.write("Id : " + product.Id + "<br>"
+                            + "Name : " + product.name + "<br>"
+                            + "Price : " + product.price + "<br>"
+                            + "Is in Stock : " + product.isInStock + "<br>"
+                            + "Shipped to : " + product.shippedTo + "<br>"
+                            + "Total amount : " + product.total() + "<br>");
+        }
+        objSample();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

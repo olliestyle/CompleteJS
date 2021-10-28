@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ObjectSample1</title>
+    <script>
+        function showPicture() {
+            var pictures = [
+                {id:1, name:"duck", price:1300, photo:"/CompleteJS/images/duck.jpeg"},
+                {id:2, name:"dress", price:1500, photo:"/CompleteJS/images/girl.jpeg"},
+                {id:3, name:"balloon", price:2400, photo:"/CompleteJS/images/baloon.jpeg"}
+            ];
+            var pic = document.getElementById("pic");
+            var txtRange = document.getElementById("txtRange");
+            var picId = document.getElementById("picId");
+            var picName = document.getElementById("picName");
+            var picPrice = document.getElementById("picPrice");
+
+            pic.src = pictures[txtRange.value].photo;
+            picId.innerHTML = pictures[txtRange.value].id;
+            picName.innerHTML = pictures[txtRange.value].name;
+            picPrice.innerHTML = pictures[txtRange.value].price;
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <table width="500" border="2" cellspacing="4" cellpadding="4" align="center">
+            <tr>
+                <td>
+                    <img src="" id="pic" width="300" height="300">
+                </td>
+            </tr>
+            <tr>
+                <td>pictureId</td>
+                <td id="picId"></td>
+            </tr>
+            <tr>
+                <td>pictureName</td>
+                <td id="picName"></td>
+            </tr>
+            <tr>
+                <td>picturePrice</td>
+                <td id="picPrice"></td>
+            </tr>
+        </table>
+        <div>
+            <input type="range" id="txtRange" min="0" max="2" value="0" onchange="showPicture()">
+        </div>
+    </div>
+</body>
+</html>
