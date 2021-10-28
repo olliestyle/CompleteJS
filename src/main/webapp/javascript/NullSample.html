@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NullSample</title>
+    <script>
+        function nullSample() {
+            var name = prompt("your name");
+            if(name=="") {
+                document.write("name cannot be empty");
+            } else if (name==null) {
+                document.write("you cancelled");
+            } else {
+                document.write("hello + " + name + " !");
+            }
+        }
+        nullSample();
+    </script>
+</head>
+<body>
+
+</body>
+</html>
