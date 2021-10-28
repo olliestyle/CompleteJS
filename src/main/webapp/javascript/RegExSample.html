@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RegExSample</title>
+    <script>
+        function regExSample() {
+            var pwd = document.getElementById("txtPswd").value;
+            var msg = document.getElementById("txtMsg");
+            var grade = document.getElementById("grade");
+            
+            function showGrade(min, max, value, low, high) {
+                grade.min = min;
+                grade.max = max;
+                grade.value = value;
+                grade.low = low;
+                grade.high = high;
+            }
+
+            var regExp = /(?=\\*[A-Z])\w{4,15}/;
+            if(pwd.match(regExp)) {
+                msg.innerHTML="strong_password";
+                showGrade(1,100,100,0,0);
+            } else if (pwd.length < 4) {
+                msg.innerHTML = "poor_password";
+                showGrade(1, 100, 100, 60, 80);
+            } else {
+                msg.innerHTML = "weak_password";
+                showGrade(1, 100, 100, 40, 80);
+            }
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <fieldset>
+            <legend>password</legend>
+            <input type="password" id="txtPswd" onkeyup="regExSample()">
+            <meter value="0" min="1" max="100" low="0" high="0" id="grade"></meter>
+            <span id="txtMsg"></span>
+        </fieldset>
+    </div>
+</body>
+</html>
