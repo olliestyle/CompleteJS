@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ArrayImageSample</title>
+    <script>
+        function arraySample() {
+            var picturesName = ["duck", "bubbles", "dress", "balloon"];
+            var picImages = ["/CompleteJS/images/duck.jpeg",
+                             "/CompleteJS/images/bubbles.jpeg",
+                             "/CompleteJS/images/girl.jpeg",
+                             "/CompleteJS/images/baloon.jpeg"];
+            var pictureName = document.getElementById("prodName");
+            var pic = document.getElementById("pic");
+            var txtRange = document.getElementById("txtRange");
+            pictureName.innerHTML = picturesName[txtRange.value];
+            pic.src=picImages[txtRange.value];
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <table width="500" border="2" cellspacing="5" cellpadding="5" align="center">
+            <tr>
+                <td align="center" id="prodName"></td>
+            </tr>
+            <tr>
+                <td>
+                    <img id="pic" src="/CompleteJS/images/duck.jpeg" width="300" height="300">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="range" id="txtRange" min="0" max="3" value="0" onchange="arraySample()">
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
