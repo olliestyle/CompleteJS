@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ControlFlowSample1</title>
+    <script>
+        function selectHardDisk() {
+            var lstHdd = document.getElementById("lsthdd");
+            var txtRam = document.getElementById("txtram");
+            if (parseInt(lstHdd.value) >= 5) {
+                txtRam.disabled = false;
+                lstHdd.disabled = true;
+            }
+        }
+        function selectRam() {
+            var txtRam = document.getElementById("txtram");
+            var lstGraphic = document.getElementById("lstgraph");
+            if (txtRam.value >= 4) {
+                lstGraphic.disabled = false;
+                txtRam.disabled = true;
+            }
+        }
+        function selectGraphic() {
+            var lstGraphic = document.getElementById("lstgraph");
+            var btnInstall = document.getElementById("btninstall");
+            if (lstGraphic.value == "yes") {
+                btnInstall.disabled = false;
+                lstGraphic.disabled = true;
+            }
+        }
+        function install() {
+            document.write("Game installed succesfully");
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <fieldset>
+            <legend>Install Game</legend>
+            <dl>
+                <dt>Select available hard disk space</dt>
+                <dd>
+                    <select id="lsthdd" onchange="selectHardDisk()">
+                        <option value="2">2gb</option>
+                        <option value="5">5gb</option>
+                        <option value="10">10gb</option>
+                    </select>
+                </dd>
+                <dt>Select available RAM</dt>
+                <dd>
+                    <input type="number" min="1" max="8" value="1" id="txtram" disabled onchange="selectRam()">
+                </dd>
+                <dt>Is graphic card available</dt>
+                <dd>
+                    <select id="lstgraph" disabled onchange="selectGraphic()">
+                        <option value="yes">YES</option>
+                        <option value="no">NO</option>
+                    </select>
+                </dd>
+                <input type="button" id="btninstall" value="install" disabled onclick="install()">
+            </dl>
+        </fieldset>
+    </div>
+</body>
+</html>

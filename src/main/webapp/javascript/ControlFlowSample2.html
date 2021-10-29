@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ControlFlowSample2</title>
+    <script>
+        function checkName() {
+            var users = [
+                {username:"Oleg"},
+                {username:"Pavel"},
+                {username:"Dima"},
+                {username:"Egor"},
+            ];
+            var userToCheck = document.getElementById("username").value;
+            var msg = document.getElementById("msg");
+            msg.innerHTML = "Available name";
+            for (var i = 0; i < users.length; i++) {
+                if (userToCheck === users[i].username) {
+                    msg.innerHTML = "Name is already used";
+                    return;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <fieldset>
+            <legend>Type name</legend>
+            <input type="text" id="username">
+            <input type="button" value="Check name" onclick="checkName()">
+            <span id="msg"></span>
+        </fieldset>
+    </div>
+</body>
+</html>
