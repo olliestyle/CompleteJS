@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OperatorsSample3</title>
+    <script>
+        function createImage() {
+            var container = document.getElementById("container");
+            var pic = new Image();
+            pic.src = "../images/duck.jpeg";
+            pic.width = 200;
+            pic.height = 200;
+            pic.border = 2;
+            container.appendChild(pic);
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <div id="container">
+
+        </div>
+        <br>
+        <input type="button" value="createImage" onclick="createImage()">
+    </div>
+</body>
+</html>

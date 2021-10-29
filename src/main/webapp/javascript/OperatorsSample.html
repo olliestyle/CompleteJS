@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OperatorsSample</title>
+    <script>
+        var images = ["../images/duck.jpeg",
+                      "../images/baloon.jpeg",
+                      "../images/girl.jpeg",
+                      "../images/bubbles.jpeg"];
+        var count = 0;
+        function changeToPrevious() {
+            var pic = document.getElementById("pic");
+            count--;
+            pic.src = images[count];
+        }
+        function changeToNext() {
+            var pic = document.getElementById("pic");
+            count++;
+            pic.src = images[count];
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <table width="600" border="2" cellspacing="5" align="center">
+            <tr>
+                <td>
+                    <input type="button" value="previous" onclick="changeToPrevious()">
+                </td>
+                <td>
+                    <img src="../images/duck.jpeg" width="300" height="300" id="pic">
+                </td>
+                <td>
+                    <input type="button" value="next" onclick="changeToNext()">
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

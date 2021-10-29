@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OperatorsSample1</title>
+    <script>
+        function f() {
+            var spb = document.getElementById("spbid");
+            var mos = document.getElementById("moscowid");
+            var newyork = document.getElementById("newyorkid");
+
+            var s = "";
+            if (spb.checked) {
+                s += spb.value + "<br>";
+            }
+            if (mos.checked) {
+                s += mos.value + "<br>";
+            }
+            if (newyork.checked) {
+                s += newyork.value + "<br>";
+            }
+            msg.innerHTML = s;
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <fieldset>
+            <legend>Select</legend>
+            <ul>
+                <li>
+                    <input type="checkbox" id="spbid" value="SPb">SPb
+                </li>
+                <li>
+                    <input type="checkbox" id="moscowid" value="Moscow">Moscow
+                </li>
+                <li>
+                    <input type="checkbox" id="newyorkid" value="New-York">New-York
+                </li>
+            </ul>
+        </fieldset>
+        <br>
+        <input type="button" value="submit" onclick="f()">
+        <div align="center" id="msg"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OperatorsSample2</title>
+    <script>
+        function login() {
+            var Uname = document.getElementById("txtName").value;
+            var Upswd = document.getElementById("txtPswd").value;
+
+            var msg = document.getElementById("msg");
+            var userDetails = {
+                userName:"john",
+                password:"admin"
+            };
+
+            (Uname == userDetails.userName && Upswd == userDetails.password) ? document.write("login success") :
+                msg.innerHTML = "invalid username or password";
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <fieldset>
+            <legend>Login</legend>
+            <dl>
+                <dt>UserName</dt>
+                <dd><input type="text" id="txtName"></dd>
+                <dt>Password</dt>
+                <dd><input type="password" id="txtPswd"></dd>
+                <br>
+                <input type="button" value="Log in" onclick="login()">
+            </dl>
+        </fieldset>
+        <br>
+        <div>
+            <h1 id="msg"></h1>
+        </div>
+    </div>
+</body>
+</html>
