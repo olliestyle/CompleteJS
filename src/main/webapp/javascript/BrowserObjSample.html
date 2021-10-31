@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BrowserObjSample</title>
+    <script>
+        var newWindow;
+        function increase() {
+            newWindow = window.open("../images/duck.jpeg", "Girl", "width = 400 height = 400");
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <img src="../images/duck.jpeg" width="150" height="150" ondblclick="increase()">
+        <p>Double click on image to view large</p>
+        <input type="button" value="close" onclick="newWindow.close()">
+        <input type="button" value="print" onclick="window.print()">
+    </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BrowserObjSample2</title>
+    <script>
+        function getDetails() {
+            document.getElementById("family").innerHTML = navigator.appName;
+            document.getElementById("language").innerHTML = navigator.language;
+            document.getElementById("cookie").innerHTML = navigator.cookieEnabled;
+            document.getElementById("agent").innerHTML = navigator.userAgent;
+            for (var i = 0; i < navigator.plugins.length; i++) {
+                document.getElementById("plugin").innerHTML += navigator.plugins[i].name + "<br>";
+            }
+            var msg = document.getElementById("pdfview");
+            if (navigator.plugins["chrome pdf viewer" === undefined]) {
+                msg.innerHTML = "NO";
+            } else {
+                msg.innerHTML = "YES";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div align="center">
+        <input type="button" value="get Browser details" onclick="getDetails()">
+    </div>
+    <br>
+    <div align="center">
+        <dl>
+            <dt>Browser family</dt>
+            <dd id="family"></dd>
+            <dt>Browser language</dt>
+            <dd id="language"></dd>
+            <dt>Cookie enabled or not</dt>
+            <dd id="cookie"></dd>
+            <dt>Supported on</dt>
+            <dd id="agent"></dd>
+            <dt>Plugin supported</dt>
+            <dd id="plugin"></dd>
+            <dt>Can user view pdf document ?</dt>
+            <dd id="pdfview"></dd>
+        </dl>
+    </div>
+</body>
+</html>
