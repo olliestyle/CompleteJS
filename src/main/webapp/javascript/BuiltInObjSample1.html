@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BuiltInObjSample1</title>
+    <script>
+        function change() {
+            var name = prompt("enter your name");
+            var days = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
+            var months = ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec", ];
+            var now = new Date();
+            var weekDay = now.getDay();
+            var day = now.getDate();
+            var month = now.getMonth();
+            var year = now.getFullYear();
+
+            var today = days[weekDay] + " " + day + ", " + months[month] + " " + year;
+            document.getElementById("msg").innerHTML = today;
+            var pic = document.getElementById("pic");
+            document.getElementById("uname").innerHTML = "Hello " + name;
+            var hrs = now.getHours();
+            if (hrs >= 5 && hrs <= 12) {
+                pic.src = "../images/duck.jpeg";
+            } else if (hrs >= 12 && hrs <= 17) {
+                pic.src = "../images/girl.jpeg";
+            } else if (hrs >= 17 && hrs <= 23) {
+                pic.src = "../images/baloon.jpeg";
+            }
+        }
+    </script>
+</head>
+<body onload="change()">
+    <div id="msg" align="center">
+
+    </div>
+    <div align="center">
+        <h2 align="center" id="uname"></h2>
+        <br>
+        <br>
+        <img src="" id="pic" width="150" height="150">
+    </div>
+</body>
+</html>
