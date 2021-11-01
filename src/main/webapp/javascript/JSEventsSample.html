@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSEventsSample</title>
+    <script>
+        function submitClick(obj, e) {
+            document.write("button name: " + obj.name + "<br>"
+                + "button value: " + obj.value + "<br>"
+                + "clicked at x " + e.clientx);
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="submit" name="btnSubmit" onclick="submitClick(this, event)">
+</body>
+</html>
